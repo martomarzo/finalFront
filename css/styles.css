@@ -3,20 +3,25 @@
     margin: 0%;
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
-    color: #242E52
+    color: #242E52;
+    /* border: 2px solid red; */
 }
 html{
     font-size: 1rem;
 }
+
 /* HEADER */
+
 header{
     display: flex;
     height: 20vh;
-    width: 98vw;
-    padding: 80px;
-    /* margin: 50px; */
+    width: 100%;
+    padding: 5em;
     justify-content: space-between;
     align-items: center;
+}
+header i.fa-solid{
+    display: none;
 }
 header nav ul{
     display: flex;
@@ -32,6 +37,7 @@ header nav ul li a{
     color: #242E52
 }
 /* BOTONES */
+
 .button{
     border-radius: 2rem;
     background-color: rgb(242, 95, 58);
@@ -52,13 +58,16 @@ header nav ul li a{
     text-align: center;
     text-decoration: none;
 }
+
+/* MAIN */
+
+
 main section{
     display: flex;
-    margin: 60px;
+    margin: 2%;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap-reverse;
-    background-image: url("/img/bg-tablet-pattern.svg");
 }
 main section article{
     height: 40vh;
@@ -67,11 +76,10 @@ main section article{
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    margin: 80px;
-    
+    margin: 4%;
 }
 h2{
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 p{
@@ -82,26 +90,53 @@ h3{
     font-size: 2.5rem;
     font-weight: bold;
 }
-main section article .second{
+main section div.graficas img{
+    width: 100%;
+}
+main section article.second{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
 }
-main article div h4{
+main article.bullets div h4{
     font-weight: bold;
-    padding-bottom: 30px;
-    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 2em;
     right: 60px;
     position: relative;
 }
-h4.bullets::before{
+h4.bullet1::before{
     content: "01";
     display: inline-block;
     background-color: rgb(242, 95, 58);
     color: white;
-    border-radius: 0.9rem;
-    height: 40px;
+    border-radius: 50px;
+    padding: 13px 0px;
+    width: 60px;
+    right: 40px;
+    text-align: center;
+    position: relative;
+}
+h4.bullet2::before{
+    content: "02";
+    display: inline-block;
+    background-color: rgb(242, 95, 58);
+    color: white;
+    border-radius: 50px;
+    padding: 13px 0px;
+    width: 60px;
+    right: 40px;
+    text-align: center;
+    position: relative;
+}
+h4.bullet3::before{
+    content: "03";
+    display: inline-block;
+    background-color: rgb(242, 95, 58);
+    color: white;
+    border-radius: 50px;
+    padding: 13px 0px;
     width: 60px;
     right: 40px;
     text-align: center;
@@ -110,36 +145,35 @@ h4.bullets::before{
 main section.third{
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    margin: 4% 0px;
 }
 main section.third div.cardsConteiner{
     display: flex;
-    width: 100vw;
-    /* justify-content: space-evenly; */
 
 }
 main section.third div.cardsConteiner article.cards{
     display: flex;
     flex-direction: column;
-    /* justify-content:space-evenly; */
+    margin: 7% 1%;
     align-items: center;
     background-color: rgb(249, 249, 249);
-    width: 50%;
     height: 20vh;
     padding: 0px 50px;
 }
 main .third .cardsConteiner .cards img{
     position: relative;
-    bottom: 30px;
+    bottom: .7em;
     height: 30%;
 }
 main .third .cardsConteiner .cards p{
     text-align: center;
-    margin: 20px;
+    margin: 1em;
 }
-main section.bannerFooter{
+main section.third div.cardNav{
+    display: none;
+}
+main div.bannerFooter{
     background-color: rgb(242, 95, 58);
-    /* background-image: url("/img/illustration-intro.svg"); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -148,28 +182,36 @@ main section.bannerFooter{
     padding: 50px;
     /* margin-left: -40px; */
 }
-main section.bannerFooter h6{
+main div.bannerFooter h6{
     color: white;
     font-size: 2rem;
-    padding-left: 70px;
-    width: 30vw;
+    padding-left: 1em;
+    /* width: 30vw; */
     
 }
 
 /* FOOTER */
 
+footer p.mobile {
+    display: none;
+}
 footer{
     background-color: rgb(29, 30, 37);
     display:flex;
     justify-content: space-around;
     align-items: flex-start;
-    padding-top: 50px;
+    padding-top: 5em;
     height: 30vh;
 }
 footer div.logoIcons div.icons a i{
     margin: 5px;
     color: white;
     font-size: 1.5rem;
+}
+footer div.footerLinks{
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
 }
 footer div ul li{
     list-style-type: none;
@@ -180,7 +222,7 @@ footer div ul li a{
     text-decoration: none;
 }
 footer div.logoIcons img.logo{
-    height: 30px;
+    height: 4vh;
 }
 footer div.logoIcons{
     display: flex;
@@ -190,14 +232,15 @@ footer div.logoIcons{
     height: 20vh;
     margin-left: 50px;
 }
-footer div label{
+footer div form label{
     display: none;
 }
 footer div.formCopy input{
     border-radius: 2rem;
-    height: 40px;
+    height: 5vh;
     width: 15vw;
     color: rgb(242, 95, 58);
+    padding-left: 15px;
 
 }
 footer div.formCopy button{
@@ -205,7 +248,7 @@ footer div.formCopy button{
     color: rgb(249, 249, 249);
     border-radius: 1.5rem;
     border: none;
-    height: 50px;
+    padding: 13px 0px;
     width: 60px;
 }
 footer div.formCopy{
@@ -222,6 +265,7 @@ footer div.formCopy p{
 }
 
 /* SELECTORS */
+
 
 .button:hover{
     color: rgb(255, 239, 234);
@@ -240,4 +284,200 @@ footer a:hover{
 }
 footer div.logoIcons div.icons a i:hover{
     color: rgb(242, 95, 58);
+}
+
+
+/* QUERIES */
+
+
+@media (max-width: 1040px) {
+    header{
+        justify-content: space-between;
+        align-items: center;
+        padding:10%;
+        width: 100%;
+    }
+    header nav{
+        display: none;
+    }
+    header a.button{
+        display: none;
+    }
+    header i.fa-solid{
+        display: inline-block;
+    }
+    html{
+        font-size: .8rem;
+    }
+    main{
+        justify-content: space-between;
+        align-items: center;
+    }
+    main section{
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 9%;
+        /* height: 100%; */
+        align-items: center;
+    }
+    main section article{
+        width: 100%;
+        /* height: 100%; */
+        margin: 1%;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+    main section.firstSection{
+        flex-direction: column-reverse;
+        /* height: 50vh; */
+
+    }
+    main section.firstSection article{
+        height: 30vh;
+        margin: 10% 0px;
+        justify-content: space-around;
+    
+    }
+    main section.firstSection article h2{
+        font-size: 2.5rem;
+        padding: 0%;
+    }
+    main section.firstSection article p{
+        font-size: 1rem;
+        text-align: justify;
+
+    }
+    main section.secondSection article.second{
+        height: 100%;
+        margin-bottom: 40%;
+    }
+    main section.secondSection article.second p{
+        padding-top: 5%;
+    }
+    main section.secondSection article.bullets{
+        padding: 40% 0px;
+        margin-bottom: 40%;
+    }
+    main section.secondSection article.bullets{
+        width: 99%;
+    
+    }
+    main section.secondSection article.bullets div h4{
+        font-weight: bold;
+        background-color: rgb(255, 239, 234);
+        margin: 0%;
+        padding: 0%;
+        text-align: start;
+        position: initial;
+    }
+    main section.secondSection article.bullets div p{
+        text-align: justify;
+    }
+    main section.third{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    main section.third div.cardsConteiner article.cards{
+        margin-top: 20%;
+        padding: 2%;
+        
+    }
+    main section.third div.cardsConteiner #card1{
+        display: none;
+    }
+    main section.third div.cardsConteiner article.cards h5{
+        font-size: 1.5rem;
+
+    }
+    main section.third div.cardsConteiner article.cards img{
+        height: 40%;
+    }
+    main section.third div.cardNav p.whiteDot{
+        background-color: white;
+        border: 1px solid rgb(242, 95, 58);
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+        margin-bottom: 50px;
+        
+    }
+    main section.third div.cardNav p.redDot{
+        background-color: rgb(242, 95, 58);
+        border: 1px solid rgb(242, 95, 58);
+        border-radius: 50%;
+        height: 9px;
+        width: 9px;
+        margin-bottom: 50px;
+        
+    }
+    main section.third div.cardNav{
+        display: flex;
+        width: 50px;
+        justify-content: space-around;
+    }
+    main section.third div.cardNav{
+        display: flex;
+
+    }
+
+    main div.bannerFooter{
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+        text-align: center;
+        margin-top: 20%;
+
+    }
+    main div.bannerFooter h6{
+        font-size: 2.5rem;
+        padding: 1%;
+        margin-bottom: 20%;
+    }
+    footer{
+        flex-direction: column-reverse;
+        height: 99%;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5% 2%;
+    }
+    footer div.logoIcons{
+        flex-direction: column-reverse;
+        /* width: 80%; */
+        margin: 0%;
+    }
+    footer div.logoIcons div.icons a i{
+        font-size: 3rem;
+
+    }
+    footer div.footerLinks{
+        align-items: center;
+        width: 99%;
+    }
+    footer div.formCopy{
+        flex-wrap: nowrap;
+        margin: 0%;
+        width: 90%;
+    }
+    footer div.formCopy form input{
+        width: 80%;
+        /* margin: 1%; */
+    }
+    footer p.desktop{
+        display: none;
+    }
+    footer p.mobile{
+        display: inline-block;
+        align-self: center;
+        order: -1;
+        font-size: .7rem;
+        margin-top: 10%;
+    }
+    
+}
+@media (max-width:1200px) {
+    main section.third div.cardsConteiner #card2{
+        display: none;
+    }
 }
