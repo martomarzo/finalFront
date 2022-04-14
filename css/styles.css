@@ -3,7 +3,7 @@
     margin: 0%;
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
-    color: #242E52;
+    color: black;
     /* border: 2px solid red; */
 }
 html{
@@ -78,17 +78,21 @@ main section article{
     align-items: flex-start;
     margin: 4%;
 }
-h2{
-    font-size: 3rem;
+h2, h3, h4, h5 ,h6{
+    color: #242E52;
     font-weight: bold;
 }
-p{
-    color: rgb(143, 148, 167);
+h2{
+    font-size: 3rem;
+    
+}
+main section.secondSection article.bulletsConteiner p, main section.third div.cardsConteiner article.cards p{
+    color: #B3B2B7;
     font-weight: 300;
 }
 h3{
     font-size: 2.5rem;
-    font-weight: bold;
+    
 }
 main section div.graficas img{
     width: 100%;
@@ -99,7 +103,7 @@ main section article.second{
     justify-content: space-around;
     align-items: flex-start;
 }
-main article.bullets div h4{
+main article.bulletsConteiner div h4{
     font-weight: bold;
     padding-bottom: 20px;
     padding-top: 2em;
@@ -178,16 +182,12 @@ main div.bannerFooter{
     justify-content: space-between;
     align-items: center;
     height: 25vh;
-    /* width: 105%; */
-    padding: 50px;
-    /* margin-left: -40px; */
+    padding: 5% 7%;
 }
 main div.bannerFooter h6{
     color: white;
     font-size: 2rem;
-    padding-left: 1em;
-    /* width: 30vw; */
-    
+    width: 30vw;
 }
 
 /* FOOTER */
@@ -200,7 +200,7 @@ footer{
     display:flex;
     justify-content: space-around;
     align-items: flex-start;
-    padding-top: 5em;
+    padding-top: 5%;
     height: 30vh;
 }
 footer div.logoIcons div.icons a i{
@@ -305,6 +305,7 @@ footer div.logoIcons div.icons a i:hover{
     }
     header i.fa-solid{
         display: inline-block;
+        font-size: 2rem;   
     }
     html{
         font-size: .8rem;
@@ -355,23 +356,25 @@ footer div.logoIcons div.icons a i:hover{
     main section.secondSection article.second p{
         padding-top: 5%;
     }
-    main section.secondSection article.bullets{
-        padding: 40% 0px;
+    main section.secondSection article.bulletsConteiner{
+        /* padding: 40% 0px; */
         margin-bottom: 40%;
+        height: 90vh;
+        justify-content: space-around;
     }
-    main section.secondSection article.bullets{
-        width: 99%;
-    
+    main section.secondSection article.bulletsConteiner div.bullets p{
+        margin-top: 10%;
     }
-    main section.secondSection article.bullets div h4{
-        font-weight: bold;
+    main section.secondSection article.bulletsConteiner div h4{
         background-color: rgb(255, 239, 234);
         margin: 0%;
         padding: 0%;
         text-align: start;
         position: initial;
+        margin-left: 20px;
+        /* width: 90vw; */
     }
-    main section.secondSection article.bullets div p{
+    main section.secondSection article.bulletsConteiner div p{
         text-align: justify;
     }
     main section.third{
@@ -427,11 +430,13 @@ footer div.logoIcons div.icons a i:hover{
         justify-content: space-around;
         text-align: center;
         margin-top: 20%;
+        padding: 20% 0px;
+        width: 100%;
 
     }
     main div.bannerFooter h6{
         font-size: 2.5rem;
-        padding: 1%;
+        width: 100%;
         margin-bottom: 20%;
     }
     footer{
@@ -444,16 +449,18 @@ footer div.logoIcons div.icons a i:hover{
     }
     footer div.logoIcons{
         flex-direction: column-reverse;
-        /* width: 80%; */
         margin: 0%;
+    }
+    footer div.logoIcons div.icons{
+        width: 100vw;
     }
     footer div.logoIcons div.icons a i{
         font-size: 3rem;
-
+        padding: 3%;
     }
     footer div.footerLinks{
         align-items: center;
-        width: 99%;
+        width: 100%;
     }
     footer div.formCopy{
         flex-wrap: nowrap;
