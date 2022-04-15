@@ -9,6 +9,9 @@
 html{
     font-size: 1rem;
 }
+body{
+    background-image: url("/img/bg-tablet-pattern.svg");
+}
 
 /* HEADER */
 
@@ -93,6 +96,9 @@ main section.secondSection article.bulletsConteiner p, main section.third div.ca
 h3{
     font-size: 2.5rem;
     
+}
+main section.firstSection article p{
+    width: 70%;
 }
 main section div.graficas img{
     width: 100%;
@@ -372,7 +378,11 @@ footer div.logoIcons div.icons a i:hover{
         text-align: start;
         position: initial;
         margin-left: 20px;
-        /* width: 90vw; */
+        /* width: 100vw; */
+    }
+    main section.secondSection article.bulletsConteiner div h4::after{
+        background-color: rgb(255, 239, 234);
+        width: 200px;
     }
     main section.secondSection article.bulletsConteiner div p{
         text-align: justify;
@@ -480,6 +490,7 @@ footer div.logoIcons div.icons a i:hover{
         order: -1;
         font-size: .7rem;
         margin-top: 10%;
+        color: #B3B2B7;
     }
     
 }
